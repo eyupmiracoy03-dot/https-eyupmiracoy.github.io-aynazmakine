@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Aynaz Makine - Hizmetler</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="assets/logo.png">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: #050814;
+            color: #f5f5f5;
+        }
+        a { color: inherit; text-decoration: none; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
+        header {
+            position: sticky;
+            top: 0;
+            background: rgba(5, 10, 30, 0.95);
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+            backdrop-filter: blur(10px);
+            z-index: 10;
+        }
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.75rem 0;
+        }
+        .logo-wrap {
+            display: flex;
+            align-items: center;
+            gap: .6rem;
+        }
+        .logo-wrap img {
+            width: 40px;
+            height: 40px;
+            object-fit: contain;
+        }
+        .logo-wrap span {
+            font-weight: 700;
+            letter-spacing: .05em;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1.25rem;
+            font-size: .95rem;
+        }
+        nav a {
+            opacity: .8;
+        }
+        nav a:hover {
+            opacity: 1;
+        }
+        nav a.active {
+            opacity: 1;
+            font-weight: 600;
+            border-bottom: 2px solid #ffcc33;
+            padding-bottom: .1rem;
+        }
+        main { padding: 2.5rem 0 3rem; }
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        .intro {
+            color: #d0d0d0;
+            max-width: 40rem;
+            margin-bottom: 2rem;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3,minmax(0,1fr));
+            gap: 1.5rem;
+        }
+        .card {
+            background: radial-gradient(circle at top left,#1f2740,#080c1d 60%);
+            border-radius: 1rem;
+            padding: 1.4rem 1.3rem;
+            border: 1px solid rgba(255,255,255,0.06);
+            box-shadow: 0 14px 35px rgba(0,0,0,0.6);
+        }
+        .card h2 {
+            font-size: 1rem;
+            margin-bottom: .4rem;
+            color: #ffcc33;
+        }
+        .card p {
+            font-size: .9rem;
+            color: #d5d5d5;
+            line-height: 1.6;
+        }
+        footer {
+            border-top: 1px solid rgba(255,255,255,0.06);
+            padding: 1.5rem 0 2rem;
+            text-align: center;
+            font-size: .85rem;
+            color:#aaaaaa;
+        }
+        @media (max-width: 900px) {
+            .grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+        }
+        @media (max-width: 640px) {
+            .grid { grid-template-columns: 1fr; }
+            nav ul { gap: .75rem; font-size: .85rem; }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="container header-inner">
+        <div class="logo-wrap">
+            <img src="assets/logo.png" alt="Aynaz Makine logosu">
+            <span>AYNAZ MAKİNE</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="hizmetler.html" class="active">Hizmetler</a></li>
+                <li><a href="iletisim.html">İletişim</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main class="container">
+    <h1>Hizmetlerimiz</h1>
+    <p class="intro">
+        Müşterilerimize, tasarımdan seri üretime kadar uzanan süreçte, hassas toleranslarda ve zamanında teslim prensibiyle hizmet veriyoruz.
+    </p>
+
+    <section class="grid">
+        <article class="card">
+            <h2>Plastik &amp; Metal Enjeksiyon Kalıpları</h2>
+            <p>
+                Farklı tonajlardaki enjeksiyon makinelerine uygun, uzun ömürlü ve bakım kolaylığı sağlayan kalıplar tasarlıyor ve üretiyoruz.
+            </p>
+        </article>
+
+        <article class="card">
+            <h2>Zamak Enjeksiyon Kalıpları</h2>
+            <p>
+                Zamak alaşımları için yüksek dayanımlı, seri üretime uygun kalıp çözümleri sunarak ürünlerinizde ölçüsel kararlılık sağlıyoruz.
+            </p>
+        </article>
+
+        <article class="card">
+            <h2>Boru Bükme Kalıpları</h2>
+            <p>
+                Farklı çap ve et kalınlıklarındaki borular için, büküm sırasında deformasyonu en aza indiren özel bükme kalıpları üretiyoruz.
+            </p>
+        </article>
+
+        <article class="card">
+            <h2>Torna İşçiliği</h2>
+            <p>
+                Tek parça imalattan seri torna işçiliğine kadar, hassas ölçü ve yüzey kalitesine önem vererek talaşlı imalat hizmeti veriyoruz.
+            </p>
+        </article>
+
+        <article class="card">
+            <h2>Makine Parçaları İmalatı</h2>
+            <p>
+                Makine ve ekipmanlarınız için yedek parça, aparat ve özel bağlantı elemanlarını proje dosyanıza uygun şekilde üretiyoruz.
+            </p>
+        </article>
+
+        <article class="card">
+            <h2>Savunma Sanayi İşleri</h2>
+            <p>
+                Savunma sanayi projelerine yönelik hassas parçalar ve kalıplar üreterek, kalite ve gizlilik standartlarına uygun çalışıyoruz.
+            </p>
+        </article>
+
+        <article class="card">
+            <h2>Yedek Makine Parçaları Üretimi</h2>
+            <p>
+                Kullanım ömrünü tamamlamış veya temini zor yedek parçaları, ölçü alarak veya teknik resim üzerinden yeniden imal ediyoruz.
+            </p>
+        </article>
+
+        <article class="card">
+            <h2>Prototip &amp; Deneme Üretimi</h2>
+            <p>
+                Yeni ürün projeleriniz için düşük adetli prototip üretimleriyle, seri üretim öncesi tasarım doğrulama sürecinize destek oluyoruz.
+            </p>
+        </article>
+
+        <article class="card">
+            <h2>Teknik Destek &amp; Danışmanlık</h2>
+            <p>
+                Kalıp tasarımı, malzeme seçimi ve üretim süreçlerinizde, tecrübemizle size en uygun çözümleri sunmak için yanınızdayız.
+            </p>
+        </article>
+    </section>
+</main>
+
+<footer>
+    &copy; 2025 Aynaz Makine – Hizmetler Sayfası.
+</footer>
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Aynaz Makine - Ana Sayfa</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="assets/logo.png">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: #050814;
+            color: #f5f5f5;
+        }
+        a { color: inherit; text-decoration: none; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
+        header {
+            position: sticky;
+            top: 0;
+            background: rgba(5, 10, 30, 0.95);
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+            backdrop-filter: blur(10px);
+            z-index: 10;
+        }
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.75rem 0;
+        }
+        .logo-wrap {
+            display: flex;
+            align-items: center;
+            gap: .6rem;
+        }
+        .logo-wrap img {
+            width: 40px;
+            height: 40px;
+            object-fit: contain;
+        }
+        .logo-wrap span {
+            font-weight: 700;
+            letter-spacing: .05em;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1.25rem;
+            font-size: .95rem;
+        }
+        nav a {
+            opacity: .8;
+        }
+        nav a:hover {
+            opacity: 1;
+        }
+        nav a.active {
+            opacity: 1;
+            font-weight: 600;
+            border-bottom: 2px solid #ffcc33;
+            padding-bottom: .1rem;
+        }
+        main { padding-bottom: 3rem; }
+        .hero {
+            padding: 3rem 0 2rem;
+            display: grid;
+            grid-template-columns: minmax(0,1.3fr) minmax(0,1fr);
+            gap: 2rem;
+            align-items: center;
+        }
+        .hero h1 {
+            font-size: 2.3rem;
+            margin-bottom: .8rem;
+        }
+        .hero p { color: #cfcfcf; max-width: 32rem; line-height: 1.6; }
+        .slogan { color: #ffcc33; font-weight: 600; margin-bottom: .5rem; }
+        .hero-img {
+            max-width: 100%;
+            border-radius: 1.5rem;
+            box-shadow: 0 18px 45px rgba(0,0,0,0.7);
+        }
+        .strip-section {
+            margin-top: 1rem;
+            padding: 2rem 0;
+            background: radial-gradient(circle at top left,#1c2238,#050814 55%);
+        }
+        .strip-section h2 { text-align: center; margin-bottom: .5rem; }
+        .strip-section p { text-align: center; color:#c9c9c9; margin-bottom: 1rem; }
+        .strip-wrapper { overflow: hidden; }
+        .strip-track {
+            display: flex;
+            gap: 1rem;
+            animation: scroll 35s linear infinite;
+        }
+        .strip-track img {
+            height: 190px;
+            border-radius: .9rem;
+            box-shadow: 0 12px 30px rgba(0,0,0,.7);
+            flex-shrink: 0;
+            object-fit: cover;
+        }
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .about {
+            padding: 2.5rem 0 0;
+        }
+        .about h2 { margin-bottom: .7rem; }
+        .about p { color:#d0d0d0; max-width: 48rem; line-height: 1.7; }
+        footer {
+            border-top: 1px solid rgba(255,255,255,0.06);
+            padding: 1.5rem 0 2rem;
+            text-align: center;
+            font-size: .85rem;
+            color:#aaaaaa;
+            margin-top: 3rem;
+        }
+        @media (max-width: 768px) {
+            .hero { grid-template-columns: 1fr; }
+            .strip-track img { height: 140px; }
+            nav ul { gap: .75rem; font-size: .85rem; }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="container header-inner">
+        <div class="logo-wrap">
+            <img src="assets/logo.png" alt="Aynaz Makine logosu">
+            <span>AYNAZ MAKİNE</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Ana Sayfa</a></li>
+                <li><a href="hizmetler.html">Hizmetler</a></li>
+                <li><a href="iletisim.html">İletişim</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main class="container">
+    <section class="hero">
+        <div>
+            <p class="slogan">“Hızlı çözüm, kaliteli hizmet”</p>
+            <h1>Aynaz Makine Atölyesine Hoş Geldiniz</h1>
+            <p>
+                2018 yılında kurulan Aynaz Makine; plastik–metal–zamak enjeksiyon kalıpları, 
+                boru bükme kalıpları, torna işçiliği ve savunma sanayiine yönelik yedek makine parçaları üretiminde hizmet vermektedir.
+            </p>
+        </div>
+        <div>
+            <img src="assets/atolye1.png" alt="Atölye genel görünüm" class="hero-img">
+        </div>
+    </section>
+
+    <section class="strip-section">
+        <h2>Atölye Genel Görünüm</h2>
+        <p>CNC tezgâhlarımız, torna tezgâhlarımız ve yardımcı ekipmanlarımızdan bazı kareler.</p>
+        <div class="strip-wrapper">
+            <div class="strip-track">
+                <img src="assets/atolye1.png" alt="Atölye fotoğrafı 1">
+                <img src="assets/atolye2.png" alt="Atölye fotoğrafı 2">
+                <img src="assets/atolye3.png" alt="Atölye fotoğrafı 3">
+                <img src="assets/atolye4.png" alt="Atölye fotoğrafı 4">
+                <img src="assets/atolye5.png" alt="Atölye fotoğrafı 5">
+                <img src="assets/atolye6.png" alt="Atölye fotoğrafı 6">
+                <img src="assets/atolye7.png" alt="Atölye fotoğrafı 7">
+                <img src="assets/atolye8.png" alt="Atölye fotoğrafı 8">
+                <img src="assets/atolye1.png" alt="Atölye fotoğrafı 1 tekrar">
+                <img src="assets/atolye2.png" alt="Atölye fotoğrafı 2 tekrar">
+                <img src="assets/atolye3.png" alt="Atölye fotoğrafı 3 tekrar">
+                <img src="assets/atolye4.png" alt="Atölye fotoğrafı 4 tekrar">
+            </div>
+        </div>
+    </section>
+
+    <section class="about">
+        <h2>Biz Kimiz?</h2>
+        <p>
+            Şirketimiz sektöre ilk olarak torna işçiliğiyle başlamış, geçen yıllar içinde büyüme hedeflerini adım adım 
+            gerçekleştirerek CNC freze, manuel freze ve 2 metrelik universal torna gibi birçok tezgâh yatırımı yapmıştır.
+            Bugün boru bükme kalıpları, metal–plastik–zamak enjeksiyon kalıpları ve savunma sanayiine yönelik özel parçalar 
+            üreterek müşterilerine hızlı ve kaliteli çözümler sunmaya devam etmektedir.
+        </p>
+    </section>
+</main>
+
+<footer>
+    &copy; 2025 Aynaz Makine – Tüm hakları saklıdır.
+</footer>
+</body>
+</html>
