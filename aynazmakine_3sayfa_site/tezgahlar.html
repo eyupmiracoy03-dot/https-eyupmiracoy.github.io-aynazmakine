@@ -2,7 +2,7 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <title>Aynaz Makine - Ana Sayfa</title>
+    <title>Tezgâhlarımız - Aynaz Makine</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="assets/logo.png">
     <style>
@@ -49,8 +49,12 @@
             gap: 1.25rem;
             font-size: .95rem;
         }
-        nav a { opacity: .8; }
-        nav a:hover { opacity: 1; }
+        nav a {
+            opacity: .8;
+        }
+        nav a:hover {
+            opacity: 1;
+        }
         nav a.active {
             opacity: 1;
             font-weight: 600;
@@ -58,64 +62,47 @@
             padding-bottom: .1rem;
         }
 
-        .hero {
-            padding: 3rem 0 2rem;
-            display: grid;
-            grid-template-columns: minmax(0,1.3fr) minmax(0,1fr);
-            gap: 2rem;
-            align-items: center;
+        main { padding: 2.5rem 0 3rem; }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
         }
-        .hero-img {
-            max-width: 100%;
-            border-radius: 1.5rem;
+
+        .intro {
+            color: #d0d0d0;
+            max-width: 46rem;
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+
+        .tezgah-tablo-wrap {
+            background: radial-gradient(circle at top left,#1c2238,#050814 60%);
+            padding: 1.5rem;
+            border-radius: 1.3rem;
+            border: 1px solid rgba(255,255,255,0.06);
             box-shadow: 0 18px 45px rgba(0,0,0,0.7);
         }
 
-        .strip-section {
-            margin-top: 1rem;
-            padding: 2rem 0;
-            background: radial-gradient(circle at top left,#1c2238,#050814 55%);
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
         }
-        .strip-wrapper { overflow: hidden; }
-        .strip-track {
-            display: flex;
-            gap: 1rem;
-            animation: scroll 35s linear infinite;
+        thead {
+            background: rgba(255,255,255,0.08);
         }
-        .strip-track img {
-            height: 190px;
-            border-radius: .9rem;
-            box-shadow: 0 12px 30px rgba(0,0,0,.7);
-            flex-shrink: 0;
-            object-fit: cover;
+        th, td {
+            padding: 0.75rem 0.9rem;
+            border-bottom: 1px solid rgba(255,255,255,0.07);
+            vertical-align: top;
         }
-        @keyframes scroll {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
+        th {
+            text-align: left;
+            font-weight: 600;
         }
-
-        .about { padding: 2.5rem 0 0; }
-
-        .partners {
-            text-align: center;
-            margin-top: 3rem;
-        }
-        .partner-logos {
-            margin-top: 1.5rem;
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            flex-wrap: wrap;
-        }
-        .partner-logos img {
-            width: 140px;
-            height: auto;
-            object-fit: contain;
-            filter: brightness(0.92);
-            background: #ffffff10;
-            padding: 8px;
-            border-radius: 12px;
-            box-shadow: 0 4px 18px rgba(0,0,0,.5);
+        tbody tr:nth-child(even) {
+            background: rgba(0,0,0,0.15);
         }
 
         footer {
@@ -124,9 +111,14 @@
             text-align: center;
             font-size: .85rem;
             color:#aaaaaa;
-            margin-top: 3rem;
+            margin-top: 2rem;
         }
 
+        @media (max-width: 768px) {
+            nav ul { gap: .75rem; font-size: .85rem; }
+            .tezgah-tablo-wrap { padding: 1rem; }
+            th, td { font-size: 0.85rem; }
+        }
     </style>
 </head>
 <body>
@@ -139,9 +131,9 @@
         </div>
         <nav>
             <ul>
-                <li><a href="index.html" class="active">Ana Sayfa</a></li>
+                <li><a href="index.html">Ana Sayfa</a></li>
                 <li><a href="hizmetler.html">Hizmetler</a></li>
-                <li><a href="tezgahlar.html">Tezgâhlarımız</a></li>
+                <li><a href="tezgahlar.html" class="active">Tezgâhlarımız</a></li>
                 <li><a href="iletisim.html">İletişim</a></li>
             </ul>
         </nav>
@@ -149,71 +141,87 @@
 </header>
 
 <main class="container">
+    <h1>Tezgâhlarımız</h1>
+    <p class="intro">
+        Üretim süreçlerimizde hassasiyet, hız ve tekrarlanabilirlik elde edebilmek için modern tezgâh parkuru ile çalışıyoruz.
+        Aşağıda atölyemizde bulunan başlıca makinelerin teknik özellikleri yer almaktadır.
+    </p>
 
-    <!-- HERO -->
-    <section class="hero">
-        <div>
-            <p class="slogan">“Hızlı çözüm, kaliteli hizmet”</p>
-            <h1>Aynaz Makine Atölyesine Hoş Geldiniz</h1>
-            <p>
-                2018 yılında kurulan Aynaz Makine; plastik–metal–zamak enjeksiyon kalıpları, 
-                boru bükme kalıpları, torna işçiliği ve savunma sanayiine yönelik yedek makine parçaları üretiminde hizmet vermektedir.
-            </p>
-        </div>
-        <div>
-            <img src="assets/atolye1.png" class="hero-img">
-        </div>
-    </section>
+    <div class="tezgah-tablo-wrap">
+        <table>
+            <thead>
+                <tr>
+                    <th>Tezgâh / Ekipman</th>
+                    <th>Kapasite / Ölçü</th>
+                    <th>Açıklama</th>
+                </tr>
+            </thead>
+            <tbody>
 
-    <!-- STRIP SECTION -->
-    <section class="strip-section">
-        <h2>Atölye Genel Görünüm</h2>
-        <p>CNC tezgâhlarımız, torna tezgâhlarımız ve yardımcı ekipmanlarımızdan bazı kareler.</p>
+                <!-- CNC FREZE -->
+                <tr>
+                    <td>CNC Freze – Kitagawa LVC-1370</td>
+                    <td>
+                        X: 1300 mm<br>
+                        Y: 700 mm<br>
+                        Z: 700 mm<br>
+                        Tabla: 1400 × 700 mm<br>
+                        Yük Kapasitesi: 1700 kg
+                    </td>
+                    <td>
+                        BBT40 spindle yapısı ve 10.000 rpm standart devir ile kalıp ve hassas işleme operasyonlarında kullanılmaktadır.
+                        Lineer kızaklı yapısı, yüksek hızlarda dahi stabil ve tekrarlanabilir sonuçlar alınmasını sağlar. 
+                        Mitsubishi M70 kontrol ünitesi ile programlama ve operasyon takibi kolaydır.
+                    </td>
+                </tr>
 
-        <div class="strip-wrapper">
-            <div class="strip-track">
-                <img src="assets/atolye1.png">
-                <img src="assets/atolye2.png">
-                <img src="assets/atolye3.png">
-                <img src="assets/atolye4.png">
-                <img src="assets/atolye5.png">
-                <img src="assets/atolye6.png">
-                <img src="assets/atolye7.png">
-                <img src="assets/atolye8.png">
+                <!-- ÜNİVERSAL TORNA -->
+                <tr>
+                    <td>Üniversal Torna – Yunnan 2 metre</td>
+                    <td>
+                        Puntalar arası: 2000 mm<br>
+                        Banko üzeri çap: 500 mm<br>
+                        Fener mili deliği: 82 mm
+                    </td>
+                    <td>
+                        Uzun miller, borular ve çeşitli silindirik parçaların tornalanması için kullanılmaktadır.
+                        Güçlü motoru ve rijit gövde yapısı sayesinde ağır işleme koşullarında dahi stabilite sağlar.
+                    </td>
+                </tr>
 
-                <img src="assets/atolye1.png">
-                <img src="assets/atolye2.png">
-            </div>
-        </div>
-    </section>
+                <!-- ŞERİT TESTERE -->
+                <tr>
+                    <td>Şerit Testere – Craft Ø275</td>
+                    <td>
+                        Maksimum kesim çapı: Ø 275 mm<br>
+                        Kullanım: Metal kesim, boru ve profil kesimleri
+                    </td>
+                    <td>
+                        Hammadde hazırlığında boru, lama ve kütük malzemelerin seri ve hassas bir şekilde boylandırılması için kullanılmaktadır.
+                        Freze ve torna operasyonlarından önce malzemenin uygun ölçülere getirilmesini sağlar.
+                    </td>
+                </tr>
 
-    <!-- ABOUT -->
-    <section class="about">
-        <h2>Biz Kimiz?</h2>
-        <p>
-            Şirketimiz sektöre ilk olarak torna işçiliğiyle başlamış, geçen yıllar içinde büyüme hedeflerini adım adım 
-            gerçekleştirerek CNC freze, manuel freze ve 2 metrelik universal torna gibi birçok tezgâh yatırımı yapmıştır.
-        </p>
-    </section>
+                <!-- HAVŞA & KLAVUZ -->
+                <tr>
+                    <td>Otomatik Havşa & Klavuz Makinesi – Mabu Volumec / LMT Tapmatic 333</td>
+                    <td>
+                        İşleme çap aralığı: Ø3 – Ø16 mm<br>
+                        Fonksiyon: Otomatik havşa ve klavuz çekme
+                    </td>
+                    <td>
+                        Bağlantı elemanları ve diş açılması gereken deliklerde seri ve kontrollü klavuz çekme imkânı sunar.
+                        Tork kontrollü yapısı ile diş sıyırma riskini azaltır, üretim hattında hız ve verimlilik kazandırır.
+                    </td>
+                </tr>
 
-    <!-- ÇALIŞTIĞIMIZ FİRMALAR -->
-    <section class="partners">
-        <h2>Çalıştığımız Firmalar</h2>
-        <p>Projelerimizde birlikte çalıştığımız çözüm ortaklarımız.</p>
-
-        <div class="partner-logos">
-            <img src="assets/aselsan.jpg.jpg" alt="Aselsan">
-            <img src="assets/eka-muhendislik.jpg.jpg" alt="EKA Mühendislik">
-            <img src="assets/goplast.jpeg" alt="Goplast">
-            <img src="assets/kulp-ambalaj.png.png" alt="Kulp Ambalaj">
-            <img src="assets/machsol.png.png" alt="Machsol">
-        </div>
-    </section>
-
+            </tbody>
+        </table>
+    </div>
 </main>
 
 <footer>
-    &copy; 2025 Aynaz Makine – Tüm hakları saklıdır.
+    &copy; 2025 Aynaz Makine – Tezgâh Parkuru.
 </footer>
 
 </body>
