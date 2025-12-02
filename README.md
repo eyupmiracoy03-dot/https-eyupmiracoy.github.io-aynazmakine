@@ -1,1 +1,0 @@
-# https-eyupmiracoy.github.io-aynazmakine
